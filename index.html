@@ -1,67 +1,98 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - WebDev Insights</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Onze Blogs - WebDev Insights</title>
+    <!-- Voeg Tailwind CSS toe -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <style>
+        .post-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <nav class="navbar">
-            <div class="container">
-                <div class="navbar-brand">WebDev Insights</div>
-                <ul class="nav-menu">
-    
-                </ul>
-            </div>
-        </nav>
-        <div class="hero">
-            <h1>Welkom op mijn Blog</h1>
-            <p>Diepgaande artikelen over webontwikkeling, design en meer</p>
-        </div>
-    </header>
 
-      <!-- Other Blog Posts Section -->
-      <section class="blog-posts">
-        <article class="post">
-            <h2>Hoe ChatGPT Webontwikkeling Kan vermakkelijken</h2>
-            <p class="meta">Gepubliceerd op: 24 juni 2024 door Fatoumata Barry</p>
-            <p>Lees hier hoe chatgpt je kan helpen met het programmeren van websites...</p>
-            <a href="blog1.html" class="read-more">Lees Meer</a>
-        </article>
+<body class="bg-gray-50 text-gray-900 font-sans">
+    <!-- Blog Sectie -->
+    <section class="py-24">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between gap-8"> <!-- Flex voor linker- en rechterkolom -->
+                
+                <!-- Tekst en CTA aan de linkerkant -->
+                <div class="w-full lg:w-1/3">
+                    <div class="block lg:text-left text-center">
+                        <h2 class="text-4xl font-bold text-gray-900 leading-[3.25rem] mb-5">Our latest <span class="text-blue-600">blogs</span></h2>
+                        <p class="text-gray-500 mb-10 max-lg:max-w-xl max-lg:mx-auto">
+                            Ontdek in onze nieuwste blog hoe ChatGPT webontwikkeling makkelijker en sneller kan maken. Van het schrijven van code tot het bedenken van creatieve oplossingen – leer hoe je AI kunt inzetten om je projecten efficiënter te beheren en te ontwikkelen.
+                        </p>
+                        <a href="https://www.example.com" class="cursor-pointer border border-gray-300 shadow-sm rounded-full py-3.5 px-7 w-52 lg:mx-0 mx-auto flex justify-center text-gray-900 font-semibold transition-all duration-300 hover:bg-gray-100">View All</a>
 
-        
-    </section>
-</main>
-
-
-    <footer class="footer">
-        <div class="container footer-container">
-            <div class="footer-section">
-                <div class="footer-logo">Web Dev Agency.</div>
-                <div class="nav-links">
-                    <a href="https://webdevagency.nl/">Home</a>
+                    </div>
                 </div>
-            </div>
-            <div class="footer-section">
-                <div class="follow-text">Follow Web Dev Agency</div>
-                <div class="social-icons">
-                    <a href="https://linkedin.com/in/fatoumata-barry-825b10287" target="_blank" rel="noopener noreferrer">
-                        <img src="images/LinkedIn-80x80.png" alt="LinkedIn">
-                    </a>
-                    <a href="https://www.facebook.com/profile.php?id=61550541907174" target="_blank" rel="noopener noreferrer">
-                        <img src="images/Facebook-80x80.png" alt="Facebook">
-                    </a>
+
+                <div class="w-full lg:w-2/3 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Blog 1 Card -->
+                    <div class="w-full group post-card bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition duration-300">
+                        <img src="https://pagedone.io/asset/uploads/1696244059.png" alt="blog afbeelding" class="w-full h-64 object-cover mb-4">
+                        <div class="p-4">
+                            <h3 class="text-xl text-gray-900 font-medium leading-8 mb-4 group-hover:text-blue-600">Hoe ChatGPT Webontwikkeling Kan vermakkelijken</h3>
+                            <p class="text-gray-500 leading-6 transition-all duration-500 mb-8">ChatGPT is een slimme tool die teksten en code kan schrijven. Maar hoe kun je het implementeren in je workflow..</p>
+                            <a href="blog1.html" class="cursor-pointer flex items-center gap-2 text-lg text-blue-700 font-semibold">Lees Meer
+                                <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.25 6L13.25 6M9.5 10.5L13.4697 6.53033C13.7197 6.28033 13.8447 6.15533 13.8447 6C13.8447 5.84467 13.7197 5.71967 13.4697 5.46967L9.5 1.5" stroke="#2563EB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                
+                    <!-- Blog 2 Card -->
+                    <div class="w-full group post-card bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition duration-300">
+                        <img src="Images/luca-bravo-XJXWbfSo2f0-unsplash.jpg" alt="blog afbeelding" class="w-full h-64 object-cover mb-4">
+                        <div class="p-4">
+                            <h3 class="text-xl text-gray-900 font-medium leading-8 mb-4 group-hover:text-blue-600">De impact van AI op UX/UI ontwerp</h3>
+                            <p class="text-gray-500 leading-6 transition-all duration-500 mb-8">Ontdek hoe AI-tools zoals ChatGPT en DALL-E de manier veranderen waarop UX/UI-designers werken.</p>
+                            <a href="blog2.html" class="cursor-pointer flex items-center gap-2 text-lg text-blue-700 font-semibold">Lees Meer
+                                <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.25 6L13.25 6M9.5 10.5L13.4697 6.53033C13.7197 6.28033 13.8447 6.15533 13.8447 6C13.8447 5.84467 13.7197 5.71967 13.4697 5.46967L9.5 1.5" stroke="#2563EB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                
+                    <!-- Blog 3 Card -->
+                    <div class="w-full group post-card bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition duration-300">
+                        <img src="Images/crew-4Hg8LH9Hoxc-unsplash.jpg" alt="blog afbeelding" class="w-full h-64 object-cover mb-4">
+                        <div class="p-4">
+                            <h3 class="text-xl text-gray-900 font-medium leading-8 mb-4 group-hover:text-blue-600">Hoe weet je of een website betrouwbaar is?</h3>
+                            <p class="text-gray-500 leading-6 transition-all duration-500 mb-8">In de wereld van internet is er een overvloed aan informatie beschikbaar, maar niet alle websites zijn even betrouwbaar.</p>
+                            <a href="blog3.html" class="cursor-pointer flex items-center gap-2 text-lg text-blue-700 font-semibold">Lees Meer
+                                <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.25 6L13.25 6M9.5 10.5L13.4697 6.53033C13.7197 6.28033 13.8447 6.15533 13.8447 6C13.8447 5.84467 13.7197 5.71967 13.4697 5.46967L9.5 1.5" stroke="#2563EB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                
+                    <!-- Blog 4 Card -->
+                    <div class="w-full group post-card bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition duration-300">
+                        <img src="Images/tirza-van-dijk-o1SKqmgSDbg-unsplash.jpg" alt="blog afbeelding" class="w-full h-64 object-cover mb-4">
+                        <div class="p-4">
+                            <h3 class="text-xl text-gray-900 font-medium leading-8 mb-4 group-hover:text-blue-600">Web Design als Kunst: Trends die jouw Website naar een Hoger Niveau Tillen</h3>
+                            <p class="text-gray-500 leading-6 transition-all duration-500 mb-8">Webdesign is de afgelopen jaren geëvolueerd van puur functioneel naar een echte kunstvorm.</p>
+                            <a href="blog4.html" class="cursor-pointer flex items-center gap-2 text-lg text-blue-700 font-semibold">Lees Meer
+                                <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.25 6L13.25 6M9.5 10.5L13.4697 6.53033C13.7197 6.28033 13.8447 6.15533 13.8447 6C13.8447 5.84467 13.7197 5.71967 13.4697 5.46967L9.5 1.5" stroke="#2563EB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="footer-section">
-                <div class="copyright-text">
-                    &copy; 2024 Web Dev Agency. All rights reserved.
-                </div>
-            </div>
-        </div>
-    </footer>
-    <script src="script.js"></script>
-</body>
+                
+             </body>
+
 </html>
+
