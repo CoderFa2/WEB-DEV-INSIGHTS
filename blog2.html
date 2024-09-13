@@ -3,99 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>De Toekomst van Front-End Web Development: Wat Moet Je Leren Als Je Nu Start?</title>
-    <!-- Tailwind CSS -->
+    <meta name="description" content="Leer over de toekomst van front-end web development. Ontdek de basis van HTML, CSS, JavaScript, en frameworks zoals Tailwind CSS en Daisy UI.">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>De Toekomst van Front-End Web Development</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.0.3/dist/full.css" rel="stylesheet">
     <style>
-        /* Extra custom styling for the design */
         body {
-            font-family: 'Inter', sans-serif;
+            background-image: url('https://source.unsplash.com/1600x900/?technology,web');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
         }
-        .gradient-bg {
-            background: linear-gradient(135deg, #2b5876, #4e4376);
+        main {
+            backdrop-filter: blur(10px);
         }
-        .card-shadow {
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        a {
+            transition: all 0.3s ease;
+        }
+        a:hover {
+            color: #1d4ed8;
+            transform: scale(1.05);
+        }
+        .btn {
+            @apply bg-blue-500 text-white px-4 py-2 rounded-md shadow-md hover:bg-blue-600;
         }
     </style>
 </head>
-<body class="bg-gray-100 text-gray-900">
+<body class="bg-gray-50 font-sans leading-relaxed text-gray-800">
 
-    <!-- Header Section -->
-    <header class="gradient-bg py-12 text-white">
-        <div class="container mx-auto text-center">
-            <h1 class="text-5xl font-extrabold mb-4">De Toekomst van Front-End Web Development</h1>
-            <p class="text-xl font-light">Wat Moet Je Leren Als Je Nu Start?</p>
-        </div>
-    </header>
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto p-8 mt-10 bg-white shadow-lg rounded-lg bg-opacity-80">
+        <section>
+            <h1 class="text-3xl font-extrabold text-blue-600 mb-4">De Toekomst van Front-End Web Development</h1>
+            <p class="text-xl text-gray-700 mb-6">Wat moet je leren als je nu start?</p>
+            <p class="text-lg mb-6">
+                Tegenwoordig is het hebben van een website of landingspagina onmisbaar in de ondernemerswereld. Een website stelt mensen in staat om meer te weten te komen over:
+            </p>
+            <ul class="list-disc list-inside text-lg mb-6 text-gray-700">
+                <li>Jou als individu</li>
+                <li>Jouw product of dienst</li>
+                <li>Het probleem dat jij voor hen kunt oplossen</li>
+            </ul>
+            <p class="text-lg mb-6">
+                De manier waarop websites worden geprogrammeerd, is in de loop der jaren enorm veranderd. Er zijn nieuwe programmeertalen, frameworks, en UI-componenten bijgekomen. En laten we de opkomst van AI niet vergeten, die het werkproces voor webdevelopers aanzienlijk efficiënter maakt.
+            </p>
+            <p class="text-lg mb-6">
+                Nu we weten waarom een website tegenwoordig van cruciaal belang is en hoe web development is geëvolueerd, is het tijd om te bespreken wat je moet leren als je nu zou beginnen met het programmeren van websites.
+            </p>
+        </section>
 
-    <!-- Main Content Section -->
-    <main class="container mx-auto px-4 py-12">
-        <article class="space-y-12">
+        <section>
+            <h2 class="text-4xl font-semibold text-blue-500 mb-4">Begin met de Basis: HTML, CSS, en JavaScript</h2>
+            <p class="text-lg text-gray-700 mb-6">
+                Allereerst is het essentieel om de basisprogrammeertalen te leren: HTML, CSS en JavaScript. Zie het als volgt:
+            </p>
+            <ul class="list-disc list-inside text-lg mb-6 text-gray-700">
+                <li><strong>HTML</strong> is de fundering van een huis; het zorgt ervoor dat het huis blijft staan. In web development vormt HTML de structuur van je website.</li>
+                <li><strong>CSS</strong> is de styling van het huis; het zorgt voor een moderne en aantrekkelijke uitstraling. CSS bepaalt hoe je website eruitziet.</li>
+                <li><strong>JavaScript</strong> voegt functionaliteit toe aan je website, waardoor gebruikers interacties kunnen uitvoeren.</li>
+            </ul>
+            <p class="text-lg text-gray-700 mb-6">
+                Zodra je deze basisvaardigheden beheerst, kun je overstappen naar frameworks die je website een nog betere en modernere uitstraling geven.
+            </p>
+        </section>
 
-            <!-- Introductie -->
-            <section class="bg-white p-8 rounded-lg card-shadow">
-                <h2 class="text-3xl font-semibold mb-4">Waarom Een Website Onmisbaar Is</h2>
-                <p>Tegenwoordig is het hebben van een website of landingspagina onmisbaar in de ondernemerswereld. Een website stelt mensen in staat om meer te weten te komen over:</p>
-                <ul class="list-disc list-inside pl-5 mt-4 space-y-2 text-gray-700">
-                    <li><strong>Jou als individu</strong>: Je persoonlijke merk en expertise.</li>
-                    <li><strong>Jouw product of dienst</strong>: De waarde die je biedt.</li>
-                    <li><strong>De problemen die jij oplost</strong>: Hoe je klanten helpt hun uitdagingen te overwinnen.</li>
-                </ul>
-            </section>
+        <section>
+            <h2 class="text-4xl font-semibold text-blue-500 mb-4">Maak Kennis met Tailwind CSS</h2>
+            <p class="text-lg text-gray-700 mb-6">
+                Een voorbeeld van een utility-first CSS framework is <strong>Tailwind CSS</strong>. Tailwind CSS biedt een collectie van CSS utility classes die je kunt gebruiken om je eigen stijlen te creëren, zonder dat je zelf veel CSS hoeft te schrijven. 
+            </p>
+            <p class="text-lg text-gray-700 mb-6">
+                Deze utility classes kunnen worden gecombineerd om complexe ontwerpen te bouwen. Het framework is zeer flexibel, omdat je het uiterlijk en de indeling van je webpagina’s volledig kunt aanpassen zonder beperkingen van vooraf gedefinieerde componenten.
+            </p>
+        </section>
 
-            <!-- Basisvaardigheden -->
-            <section class="bg-white p-8 rounded-lg card-shadow">
-                <h2 class="text-3xl font-semibold mb-4">Begin met de Basis: HTML, CSS, en JavaScript</h2>
-                <p>Allereerst is het essentieel om de basisprogrammeertalen te leren: HTML, CSS en JavaScript. Zie het als volgt:</p>
-                <ul class="list-disc list-inside pl-5 mt-4 space-y-2 text-gray-700">
-                    <li><strong>HTML</strong>: De fundering van je website.</li>
-                    <li><strong>CSS</strong>: De styling die je website aantrekkelijk maakt.</li>
-                    <li><strong>JavaScript</strong>: De functionaliteit die interactie mogelijk maakt.</li>
-                </ul>
-                <p class="mt-4">Met deze vaardigheden leg je de basis voor elk webproject. Zodra je deze beheerst, kun je verder gaan met meer geavanceerde tools en frameworks.</p>
-            </section>
+        <section>
+            <h2 class="text-4xl font-semibold text-blue-500 mb-4">UI-Componenten met Daisy UI</h2>
+            <p class="text-lg text-gray-700 mb-6">
+                Naast Tailwind CSS kun je ook gebruik maken van verschillende UI-component libraries om je werk te versnellen en te vereenvoudigen. Een voorbeeld hiervan is <strong>Daisy UI</strong>. Daisy UI is een UI Component Library die bovenop Tailwind CSS is gebouwd. Het biedt kant-en-klare UI-componenten zoals knoppen, kaarten, modals en formulieren, die je direct kunt gebruiken en aanpassen in je projecten.
+            </p>
+        </section>
 
-            <!-- Tailwind CSS -->
-            <section class="bg-white p-8 rounded-lg card-shadow">
-                <h2 class="text-3xl font-semibold mb-4">Maak Kennis met Tailwind CSS</h2>
-                <p><strong>Tailwind CSS</strong> is een utility-first CSS framework dat je in staat stelt om je eigen stijlen te creëren met behulp van utility classes zoals <code class="bg-gray-100 text-blue-600 px-1 rounded">flex</code> en <code class="bg-gray-100 text-blue-600 px-1 rounded">bg-blue-500</code>. Hiermee kun je complexe ontwerpen bouwen zonder veel aangepaste CSS te hoeven schrijven.</p>
-                <p class="mt-4">Tailwind CSS biedt de flexibiliteit om het uiterlijk en de indeling van je webpagina’s volledig aan te passen, waardoor je unieke en efficiënte ontwerpen kunt maken.</p>
-            </section>
+        <section>
+            <h2 class="text-4xl font-semibold text-blue-500 mb-4">Conclusie: Leren door te Doen</h2>
+            <p class="text-lg text-gray-700 mb-6">
+                Als je nu wilt beginnen met front-end web development, zijn HTML, CSS, en Javascript je eerste stappen. Daarna kun je je vaardigheden uitbreiden met tools zoals Tailwind CSS en Daisy UI. Maar onthoud: de beste manier om te leren is door te doen.
+            </p>
+            <p class="text-lg text-gray-700 mb-6">
+                Maak websites, experimenteer met verschillende ontwerpen en functionaliteiten, en wees niet bang om fouten te maken. Falen hoort erbij en juist daar leer je het meest van.
+            </p>
+        </section>
 
-            <!-- Daisy UI -->
-            <section class="bg-white p-8 rounded-lg card-shadow">
-                <h2 class="text-3xl font-semibold mb-4">UI-Componenten met Daisy UI</h2>
-                <p><strong>Daisy UI</strong> is een UI-component library die bovenop Tailwind CSS is gebouwd. Het biedt kant-en-klare componenten zoals knoppen, kaarten, en formulieren, die je direct kunt gebruiken en aanpassen in je projecten. Met Daisy UI kun je snel professionele en consistente interfaces bouwen.</p>
-            </section>
+        <section>
+            <h2 class="text-4xl font-semibold text-blue-500 mb-4">Handige Links:</h2>
+            <ul class="list-disc list-inside text-lg mb-6 text-gray-700">
+                <li><a href="https://tailwindcss.com" class="text-blue-500 hover:underline" aria-label="Bezoek Tailwind CSS officiële website">Tailwind CSS Officiële Website</a></li>
+                <li><a href="https://daisyui.com" class="text-blue-500 hover:underline" aria-label="Bezoek Daisy UI officiële website">Daisy UI Officiële Website</a></li>
+            </ul>
+        </section>
 
-            <!-- Conclusie -->
-            <section class="bg-white p-8 rounded-lg card-shadow">
-                <h2 class="text-3xl font-semibold mb-4">Conclusie: Leren door te Doen</h2>
-                <p>De beste manier om te leren is door te doen. Bouw websites, experimenteer met ontwerpen, en wees niet bang om fouten te maken. Falen is een essentieel onderdeel van het leerproces. Elk project, hoe klein ook, helpt je om je vaardigheden verder te ontwikkelen.</p>
-            </section>
-
-            <!-- Handige Links -->
-            <section class="bg-white p-8 rounded-lg card-shadow">
-                <h2 class="text-3xl font-semibold mb-4">Handige Links</h2>
-                <ul class="list-disc list-inside pl-5 space-y-2">
-                    <li><a href="https://tailwindcss.com/" class="text-blue-600 hover:text-blue-800">Tailwind CSS Officiële Website</a></li>
-                    <li><a href="https://daisyui.com/" class="text-blue-600 hover:text-blue-800">Daisy UI Officiële Website</a></li>
-                </ul>
-            </section>
-
-            <!-- Afsluiting -->
-            <section class="text-center mt-12">
-                <p class="text-xl font-semibold text-gray-800">Laat je creativiteit de vrije loop en begin vandaag nog met het bouwen van de websites van morgen. De enige grens is je eigen verbeelding!</p>
-            </section>
-        </article>
+        <footer class="text-center mt-10">
+            <p class="text-lg text-blue-600">Blijf bouwen, blijf leren, en laat je ideeën groeien. Tot de volgende Blog Post!</p>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-md shadow-md hover:bg-blue-700 mt-4">Lees Meer Artikelen</button>
+        </footer>        
     </main>
 
-    <!-- Footer Section -->
-    <footer class="bg-gray-800 text-white py-6 mt-12">
-        <div class="container mx-auto text-center">
-            <p>&copy; 2024 Web Dev Insights. Alle rechten voorbehouden.</p>
-        </div>
-    </footer>
 </body>
 </html>
