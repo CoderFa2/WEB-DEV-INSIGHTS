@@ -7,32 +7,8 @@
     <title>Onze Blogs - WebDev Insights</title>
     <!-- Voeg Tailwind CSS toe -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
     <style>
-        /* Aangepaste stijlen */
-        .swiper-button-prev:after,
-        .swiper-button-next:after {
-            content: '' !important;
-        }
-
-        .swiper-button-next svg,
-        .swiper-button-prev svg {
-            width: 24px;
-            height: 24px;
-        }
-
-        .swiper-button-next,
-        .swiper-button-prev {
-            position: relative;
-        }
-
-        .swiper-slide-active {
-            border-color: rgb(29 78 216); /* Donkerblauw */
-        }
-
-        .swiper-slide-active .swiper-slide-active\:text-blue-600 {
-            color: rgb(29 78 216); /* Donkerblauw */
-        }
-
         .post-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
@@ -44,80 +20,78 @@
     <!-- Blog Sectie -->
     <section class="py-24">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-center flex-wrap md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between gap-8">
-                <!-- Tekst en CTA -->
-                <div class="w-full flex justify-between flex-col lg:w-2/5">
+            <div class="flex justify-between gap-8"> <!-- Flex voor linker- en rechterkolom -->
+                
+                <!-- Tekst en CTA aan de linkerkant -->
+                <div class="w-full lg:w-1/3">
                     <div class="block lg:text-left text-center">
                         <h2 class="text-4xl font-bold text-gray-900 leading-[3.25rem] mb-5">Our latest <span class="text-blue-600">blogs</span></h2>
                         <p class="text-gray-500 mb-10 max-lg:max-w-xl max-lg:mx-auto">
                             Ontdek in onze nieuwste blog hoe ChatGPT webontwikkeling makkelijker en sneller kan maken. Van het schrijven van code tot het bedenken van creatieve oplossingen – leer hoe je AI kunt inzetten om je projecten efficiënter te beheren en te ontwikkelen.
                         </p>
-                        <a href="javascript:;" class="cursor-pointer border border-gray-300 shadow-sm rounded-full py-3.5 px-7 w-52 lg:mx-0 mx-auto flex justify-center text-gray-900 font-semibold transition-all duration-300 hover:bg-gray-100">View All</a>
-                    </div>
-                    <!-- Slider Controls -->
-                    <div class="flex items-center lg:justify-start justify-center lg:mt-0 mt-8 gap-8 mb-4">
-                        <button id="slider-button-left" class="swiper-button-prev group flex justify-center items-center border border-solid border-blue-600 w-11 h-11 transition-all duration-500 rounded-full hover:bg-blue-600" data-carousel-prev>
-                            <svg class="h-6 w-6 text-blue-600 group-hover:text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M20.9999 12L4.99992 12M9.99992 6L4.70703 11.2929C4.3737 11.6262 4.20703 11.7929 4.20703 12C4.20703 12.2071 4.3737 12.3738 4.70703 12.7071L9.99992 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </button>
-                        <button id="slider-button-right" class="swiper-button-next group flex justify-center items-center border border-solid border-blue-600 w-11 h-11 transition-all duration-500 rounded-full hover:bg-blue-600" data-carousel-next>
-                            <svg class="h-6 w-6 text-blue-600 group-hover:text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M3 12L19 12M14 18L19.2929 12.7071C19.6262 12.3738 19.7929 12.2071 19.7929 12C19.7929 11.7929 19.6262 11.6262 19.2929 11.2929L14 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </button>
+                        <a href="https://www.example.com" class="cursor-pointer border border-gray-300 shadow-sm rounded-full py-3.5 px-7 w-52 lg:mx-0 mx-auto flex justify-center text-gray-900 font-semibold transition-all duration-300 hover:bg-gray-100">View All</a>
+
                     </div>
                 </div>
 
-                <!-- Blog Slider -->
-                <div class="w-full lg:w-3/5">
-                    <div class="swiper mySwiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide w-full max-lg:max-w-xl lg:w-1/2 group post-card bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition duration-300">
-                                <img src="https://pagedone.io/asset/uploads/1696244059.png" alt="blog afbeelding" class="rounded-2xl w-full mb-4">
-                                <div class="p-4">
-                                    <h3 class="text-xl text-gray-900 font-medium leading-8 mb-4 group-hover:text-blue-600">Hoe ChatGPT Webontwikkeling Kan vermakkelijken</h3>
-                                    <p class="text-gray-500 leading-6 transition-all duration-500 mb-8">ChatGPT is een slimme tool die teksten en code kan schrijven. Maar hoe kun je het implementeren in je workflow..</p>
-                                    <a href="blog1.html" class="cursor-pointer flex items-center gap-2 text-lg text-blue-700 font-semibold">Lees Meer
-                                        <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M1.25 6L13.25 6M9.5 10.5L13.4697 6.53033C13.7197 6.28033 13.8447 6.15533 13.8447 6C13.8447 5.84467 13.7197 5.71967 13.4697 5.46967L9.5 1.5" stroke="#2563EB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                            <!-- Voeg meer slides toe zoals hierboven -->
+                <div class="w-full lg:w-2/3 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Blog 1 Card -->
+                    <div class="w-full group post-card bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition duration-300">
+                        <img src="https://pagedone.io/asset/uploads/1696244059.png" alt="blog afbeelding" class="w-full h-64 object-cover mb-4">
+                        <div class="p-4">
+                            <h3 class="text-xl text-gray-900 font-medium leading-8 mb-4 group-hover:text-blue-600">Hoe ChatGPT Webontwikkeling Kan vermakkelijken</h3>
+                            <p class="text-gray-500 leading-6 transition-all duration-500 mb-8">ChatGPT is een slimme tool die teksten en code kan schrijven. Maar hoe kun je het implementeren in je workflow..</p>
+                            <a href="blog1.html" class="cursor-pointer flex items-center gap-2 text-lg text-blue-700 font-semibold">Lees Meer
+                                <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.25 6L13.25 6M9.5 10.5L13.4697 6.53033C13.7197 6.28033 13.8447 6.15533 13.8447 6C13.8447 5.84467 13.7197 5.71967 13.4697 5.46967L9.5 1.5" stroke="#2563EB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                
+                    <!-- Blog 2 Card -->
+                    <div class="w-full group post-card bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition duration-300">
+                        <img src="Images/luca-bravo-XJXWbfSo2f0-unsplash.jpg" alt="blog afbeelding" class="w-full h-64 object-cover mb-4">
+                        <div class="p-4">
+                            <h3 class="text-xl text-gray-900 font-medium leading-8 mb-4 group-hover:text-blue-600">De Toekomst van Front-End Web Development</h3>
+                            <p class="text-gray-500 leading-6 transition-all duration-500 mb-8">Wat moet je leren als je nu start?</p>
+                            <a href="blog2.html" class="cursor-pointer flex items-center gap-2 text-lg text-blue-700 font-semibold">Lees Meer
+                                <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.25 6L13.25 6M9.5 10.5L13.4697 6.53033C13.7197 6.28033 13.8447 6.15533 13.8447 6C13.8447 5.84467 13.7197 5.71967 13.4697 5.46967L9.5 1.5" stroke="#2563EB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                
+                    <!-- Blog 3 Card -->
+                    <div class="w-full group post-card bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition duration-300">
+                        <img src="Images/crew-4Hg8LH9Hoxc-unsplash.jpg" alt="blog afbeelding" class="w-full h-64 object-cover mb-4">
+                        <div class="p-4">
+                            <h3 class="text-xl text-gray-900 font-medium leading-8 mb-4 group-hover:text-blue-600">Hoe weet je of een website betrouwbaar is?</h3>
+                            <p class="text-gray-500 leading-6 transition-all duration-500 mb-8">In de wereld van internet is er een overvloed aan informatie beschikbaar, maar niet alle websites zijn even betrouwbaar.</p>
+                            <a href="blog3.html" class="cursor-pointer flex items-center gap-2 text-lg text-blue-700 font-semibold">Lees Meer
+                                <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.25 6L13.25 6M9.5 10.5L13.4697 6.53033C13.7197 6.28033 13.8447 6.15533 13.8447 6C13.8447 5.84467 13.7197 5.71967 13.4697 5.46967L9.5 1.5" stroke="#2563EB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                
+                    <!-- Blog 4 Card -->
+                    <div class="w-full group post-card bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition duration-300">
+                        <img src="Images/tirza-van-dijk-o1SKqmgSDbg-unsplash.jpg" alt="blog afbeelding" class="w-full h-64 object-cover mb-4">
+                        <div class="p-4">
+                            <h3 class="text-xl text-gray-900 font-medium leading-8 mb-4 group-hover:text-blue-600">Web Design als Kunst: Trends die jouw Website naar een Hoger Niveau Tillen</h3>
+                            <p class="text-gray-500 leading-6 transition-all duration-500 mb-8">Webdesign is de afgelopen jaren geëvolueerd van puur functioneel naar een echte kunstvorm.</p>
+                            <a href="blog4.html" class="cursor-pointer flex items-center gap-2 text-lg text-blue-700 font-semibold">Lees Meer
+                                <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.25 6L13.25 6M9.5 10.5L13.4697 6.53033C13.7197 6.28033 13.8447 6.15533 13.8447 6C13.8447 5.84467 13.7197 5.71967 13.4697 5.46967L9.5 1.5" stroke="#2563EB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-    <!-- Swiper JS -->
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 2,
-            spaceBetween: 28,
-            loop: true,
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            breakpoints: {
-                0: {
-                    slidesPerView: 1,
-                    spaceBetween: 20,
-                },
-                768: {
-                    slidesPerView: 2,
-                    spaceBetween: 28,
-                },
-                1024: {
-                    slidesPerView: 2,
-                    spaceBetween: 32,
-                },
-            },
-        });
-    </script>
-</body>
+                
+             </body>
 
 </html>
